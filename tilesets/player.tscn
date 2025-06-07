@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://pts3eyus3iks"]
+
+[ext_resource type="Script" uid="uid://dlo7gl6kyc3x1" path="res://tilesets/player.gd" id="1_t4yh2"]
+[ext_resource type="Texture2D" uid="uid://du8axppqc3tlp" path="res://Player.png" id="3_v4w8y"]
+[ext_resource type="PackedScene" uid="uid://mav47so2hpbb" path="res://HUD.tscn" id="4_f3a2i"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3epkk"]
+size = Vector2(74, 61)
+
+[node name="player" type="CharacterBody2D"]
+script = ExtResource("1_t4yh2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(152, 115)
+shape = SubResource("RectangleShape2D_3epkk")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(152, 115)
+scale = Vector2(0.556391, 0.421769)
+texture = ExtResource("3_v4w8y")
+metadata/_edit_group_ = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(109, 93)
+offset = Vector2(0, -150)
+
+[node name="HUD" parent="." instance=ExtResource("4_f3a2i")]
+offset_left = -43.0
+offset_top = 45.0
+offset_right = -43.0
+offset_bottom = 45.0
