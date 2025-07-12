@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://csdv14pq7r8og"
-path="res://.godot/imported/fondoPrincipalEstatico.png-3b855cdeef1f0fb6526c6f721d9b5af1.ctex"
+uid="uid://dddtiqwkdygga"
+path="res://.godot/imported/hormiga.png-86053bc604702d4f2fefb93d578266d3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://fondoPrincipalEstatico.png"
-dest_files=["res://.godot/imported/fondoPrincipalEstatico.png-3b855cdeef1f0fb6526c6f721d9b5af1.ctex"]
+source_file="res://assets/hormiga.png"
+dest_files=["res://.godot/imported/hormiga.png-86053bc604702d4f2fefb93d578266d3.ctex"]
 
 [params]
 

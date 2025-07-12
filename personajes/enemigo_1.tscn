@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=3 uid="uid://nc2wua71ykpk"]
+
+[ext_resource type="Texture2D" uid="uid://dddtiqwkdygga" path="res://assets/hormiga.png" id="1_chsmr"]
+[ext_resource type="Script" uid="uid://cmpo50eykeoyp" path="res://enemigo_1.gd" id="1_lsjj5"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_chsmr"]
+radius = 40.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lsjj5"]
+size = Vector2(72, 25)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_q856w"]
+radius = 37.0135
+
+[node name="enemigo1" type="CharacterBody2D"]
+collision_layer = 3
+script = ExtResource("1_lsjj5")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
+position = Vector2(72, -16)
+shape = SubResource("CircleShape2D_chsmr")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(-12, -4.5)
+shape = SubResource("RectangleShape2D_lsjj5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-82, -14)
+shape = SubResource("CircleShape2D_q856w")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_chsmr")
+metadata/_edit_group_ = true

@@ -4,9 +4,10 @@ extends CharacterBody2D
 func _ready() -> void:
 	pass
 
-func _process(delta: float) -> void:
+func _physics_process(delta: float) -> void:
 	_movimiento_del_player(delta)
 	move_and_slide()
+
 
 const velocidad = 300
 const fuerza_de_salto = -600
