@@ -3,14 +3,11 @@ extends AnimatedSprite2D
 var base_position: Vector2
 var jump_offsets = [
 	Vector2(0, 0),
+	Vector2(0, -10),
 	Vector2(0, -20),
+	Vector2(0, -30),
 	Vector2(0, -40),
-	Vector2(0, -60),
-	Vector2(0, -80),
-	Vector2(0, -60),
-	Vector2(0, -40),
-	Vector2(0, -20),
-	Vector2(0, 0),
+	Vector2(0, -50),
 ] 
 
 
