@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=4 uid="uid://hmn0pt0px0rk"]
 
 [ext_resource type="Texture2D" uid="uid://csdv14pq7r8og" path="res://assets/fondoPrincipalEstatico.png" id="1_5yuna"]
-[ext_resource type="PackedScene" uid="uid://pts3eyus3iks" path="res://personajes/player.tscn" id="2_q2bcn"]
+[ext_resource type="PackedScene" uid="uid://pts3eyus3iks" path="res://assets/player.tscn" id="2_q2bcn"]
 [ext_resource type="PackedScene" uid="uid://bl2mcwee5o8ka" path="res://Elementos de pantallas/puerta_niveles.tscn" id="3_xvhvf"]
 [ext_resource type="Script" uid="uid://vj6w8nvhkei4" path="res://PuertaTutorial.gd" id="4_hg08o"]
 [ext_resource type="Script" uid="uid://dk7o23gpr0any" path="res://puerta_nivel1.gd" id="5_a53mi"]
@@ -79,4 +79,4 @@ tile_map_data = PackedByteArray("AABDAB0AAAAdAA8AAABCAB0AAAAcAA8AAABBAB0AAAAbAA8
 tile_set = ExtResource("7_f2tvk")
 
 [node name="Enemigo1" parent="." instance=ExtResource("8_q2bcn")]
-position = Vector2(1072, 366)
+position = Vector2(1064, 360)

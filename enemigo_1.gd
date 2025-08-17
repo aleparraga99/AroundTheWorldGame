@@ -10,16 +10,17 @@ func _ready() -> void:
 	
 func _physics_process(delta: float) -> void:
 	velocity.x = direction * velocidadEnemigo1
+	$AnimatedSprite2D.play("walk")
 	move_and_slide()
 	
 	var distanciaDesdeInicio = global_position.x - posicionInicial.x
 	
 	if distanciaDesdeInicio > distanciaRecorrida:
 		direction = -1
-		$Sprite2D.scale.x = 1
+		$AnimatedSprite2D.flip_h = true
 	elif distanciaDesdeInicio <- distanciaRecorrida:
 		direction = 1
-		$Sprite2D.scale.x = -1
+		$AnimatedSprite2D.flip_h = false
 		
 func _on_body_entered(body: Node) -> void:
 	pass # Replace with function body.

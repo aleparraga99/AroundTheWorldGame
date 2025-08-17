@@ -1,33 +1,81 @@
-[gd_scene load_steps=6 format=3 uid="uid://nc2wua71ykpk"]
+[gd_scene load_steps=15 format=3 uid="uid://nc2wua71ykpk"]
 
-[ext_resource type="Texture2D" uid="uid://dddtiqwkdygga" path="res://assets/hormiga.png" id="1_chsmr"]
 [ext_resource type="Script" uid="uid://cmpo50eykeoyp" path="res://enemigo_1.gd" id="1_lsjj5"]
+[ext_resource type="Texture2D" uid="uid://bcca2mkdvyxvs" path="res://assets/enemyAnt/walk/1.png" id="2_fxgg6"]
+[ext_resource type="Texture2D" uid="uid://cnry5u64irjxl" path="res://assets/enemyAnt/walk/2.png" id="3_unt6j"]
+[ext_resource type="Texture2D" uid="uid://yo18iv2gg6qd" path="res://assets/enemyAnt/walk/3.png" id="4_5437d"]
+[ext_resource type="Texture2D" uid="uid://h07yleg42tqc" path="res://assets/enemyAnt/walk/4.png" id="5_i3sp2"]
+[ext_resource type="Texture2D" uid="uid://b261f64mdqg8o" path="res://assets/enemyAnt/walk/5.png" id="6_ya54k"]
+[ext_resource type="Texture2D" uid="uid://bxwp4buyd2xyd" path="res://assets/enemyAnt/walk/6.png" id="7_bx4jb"]
+[ext_resource type="Texture2D" uid="uid://04dd3wabp0mx" path="res://assets/enemyAnt/walk/7.png" id="8_wjsqq"]
+[ext_resource type="Texture2D" uid="uid://dt7htiq2yqvga" path="res://assets/enemyAnt/walk/8.png" id="9_ursgn"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_chsmr"]
-radius = 40.0
+[sub_resource type="SpriteFrames" id="SpriteFrames_5wux1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_fxgg6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_unt6j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_5437d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_i3sp2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ya54k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_bx4jb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_wjsqq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_ursgn")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 20.0
+}]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_lsjj5"]
-size = Vector2(72, 25)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_50f3u"]
+size = Vector2(149, 47)
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_q856w"]
-radius = 37.0135
+[sub_resource type="CircleShape2D" id="CircleShape2D_5qllt"]
+radius = 57.4543
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yw3y7"]
+radius = 48.3322
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_unt6j"]
+size = Vector2(259, 58.25)
 
 [node name="enemigo1" type="CharacterBody2D"]
 collision_layer = 3
 script = ExtResource("1_lsjj5")
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
-position = Vector2(72, -16)
-shape = SubResource("CircleShape2D_chsmr")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
-position = Vector2(-12, -4.5)
-shape = SubResource("RectangleShape2D_lsjj5")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_5wux1")
+animation = &"walk"
+frame_progress = 0.0141056
+offset = Vector2(0, 35)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-82, -14)
-shape = SubResource("CircleShape2D_q856w")
+position = Vector2(4, 28)
+shape = SubResource("RectangleShape2D_50f3u")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_chsmr")
-metadata/_edit_group_ = true
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(110, 3)
+shape = SubResource("CircleShape2D_5qllt")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
+position = Vector2(-110, 12)
+shape = SubResource("CircleShape2D_yw3y7")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="."]
+position = Vector2(2.5, 82.875)
+shape = SubResource("RectangleShape2D_unt6j")
