@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=4 uid="uid://cx1hqvmtsq4ec"]
 
-[ext_resource type="PackedScene" uid="uid://pts3eyus3iks" path="res://assets/player.tscn" id="1_rmrmp"]
-[ext_resource type="TileSet" uid="uid://c5qnglud4hray" path="res://tilesets/suelo.tres" id="2_cv2ay"]
+[ext_resource type="PackedScene" uid="uid://pts3eyus3iks" path="res://escenas/player.tscn" id="1_rmrmp"]
+[ext_resource type="TileSet" uid="uid://c5qnglud4hray" path="res://suelo.tres" id="2_cv2ay"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ojbdt"]
 size = Vector2(3552, 205)

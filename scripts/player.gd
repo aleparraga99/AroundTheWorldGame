@@ -16,14 +16,19 @@ func _movimiento_del_player(delta):
 	var movimiento = Vector2.ZERO
 	var screen_size = get_viewport_rect().size
 
-	# --- Movimiento horizontal (siempre disponible) ---
+	# Desplazamiento horizontal
 	if Input.is_action_pressed("mover_derecha"):
 		movimiento.x += 1
 		$AnimatedSprite2D.flip_h = false
+		
 	elif Input.is_action_pressed("mover_izquierda"):
 		movimiento.x -= 1
 		$AnimatedSprite2D.flip_h = true
 
+	else: $AnimatedSprite2D.stop()
+			
+	
+			
 	# Normalizar y aplicar velocidad horizontal
 	movimiento = movimiento.normalized() * velocidad
 	velocity.x = movimiento.x
@@ -37,8 +42,10 @@ func _movimiento_del_player(delta):
 	if is_on_floor():
 		if movimiento.x != 0:
 			$AnimatedSprite2D.play("walk")
+		elif not is_on_floor() and movimiento.x == 0:
+			$AnimatedSprite2D.play("jump") 
 		else:
-			$AnimatedSprite2D.stop()  # animación de estar quieto
+			$AnimatedSprite2D.stop()
 	else:
 		if velocity.y < 0:
 			$AnimatedSprite2D.play("jump")   # subiendo
@@ -51,5 +58,5 @@ func _movimiento_del_player(delta):
 	position.y = clamp(position.y, 0, screen_size.y)
 	
 func _arrojar():
-	if Input.is_action_just_pressed("Arrojar"):
+	if Input.is_action_just_pressed("arrojar"):
 		$AnimatedSprite2D.play("throw")

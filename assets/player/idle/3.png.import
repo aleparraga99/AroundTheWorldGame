@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://csdv14pq7r8og"
-path="res://.godot/imported/fondoPrincipalEstatico.png-354144fa7c5eef3859ba0545d6bc1ebe.ctex"
+uid="uid://dlv0wwhq5mai1"
+path="res://.godot/imported/3.png-32770067f546876ff5f58ae76a40ff12.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/fondoPrincipalEstatico.png"
-dest_files=["res://.godot/imported/fondoPrincipalEstatico.png-354144fa7c5eef3859ba0545d6bc1ebe.ctex"]
+source_file="res://assets/player/idle/3.png"
+dest_files=["res://.godot/imported/3.png-32770067f546876ff5f58ae76a40ff12.ctex"]
 
 [params]
 
