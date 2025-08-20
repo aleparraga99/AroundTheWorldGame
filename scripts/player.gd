@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 const VELOCIDAD = 300
 const FUERZA_DE_SALTO = -800
+const FUERZA_DE_DISPARO = 500
 const GRAVEDAD = 2500
 
 func _ready() -> void:
