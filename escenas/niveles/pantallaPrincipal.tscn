@@ -15,10 +15,10 @@ size = Vector2(2134, 307.75)
 [node name="Menú principal" type="Node2D"]
 
 [node name="TextureRect" type="TextureRect" parent="."]
-offset_left = -752.0
-offset_top = -504.0
-offset_right = 2280.0
-offset_bottom = 1344.0
+offset_left = -704.0
+offset_top = -496.0
+offset_right = 2328.0
+offset_bottom = 1352.0
 texture = ExtResource("1_udkxa")
 stretch_mode = 1
 
@@ -32,7 +32,7 @@ shape = SubResource("RectangleShape2D_sh265")
 
 [node name="player" parent="." instance=ExtResource("2_iu0ps")]
 z_index = 100
-position = Vector2(-27, 290)
+position = Vector2(-8, 368)
 
 [node name="PuertaTutorial" parent="." instance=ExtResource("3_8iun6")]
 position = Vector2(302, 366)

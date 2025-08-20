@@ -2,8 +2,8 @@ extends CharacterBody2D
 
 const VELOCIDAD = 300
 const FUERZA_DE_SALTO = -800
-const FUERZA_DE_DISPARO = 500
 const GRAVEDAD = 2500
+var proyectil = preload("res://escenas/weaponBug.tscn")
 
 func _ready() -> void:
 	pass
@@ -11,6 +11,19 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	_movimiento_del_player(delta)
 	move_and_slide()
+
+func disparar():
+	var nuevo_proyectil = proyectil.instantiate() 
+	
+	var coordenada_inicial_x_proyectil = position.x
+	var coordenada_inicial_y_proyectil = position.y - 30
+	var posicion_proyectil : Vector2 = Vector2(coordenada_inicial_x_proyectil, coordenada_inicial_y_proyectil)
+	nuevo_proyectil.position = posicion_proyectil
+	
+	get_parent().add_child(nuevo_proyectil)
+	
+	
+	
 	
 func _movimiento_del_player(delta):
 	var movimiento = Vector2.ZERO
@@ -28,7 +41,9 @@ func _movimiento_del_player(delta):
 
 	# Animaciones
 	if Input.is_action_just_pressed("arrojar"):
-		$AnimatedSprite2D.play("throw")  
+		$AnimatedSprite2D.play("throw") 
+		disparar()
+		 
 	elif movimiento.x != 0:
 		$AnimatedSprite2D.play("walk")
 	else:
@@ -38,8 +53,6 @@ func _movimiento_del_player(delta):
 		if is_on_floor():
 			velocity.y = FUERZA_DE_SALTO
 			$AnimatedSprite2D.play("jump")
-		
-			
 		
 	# Normalizar y aplicar velocidad horizontal
 	movimiento = movimiento.normalized() * VELOCIDAD
