@@ -1,16 +1,18 @@
 [gd_scene load_steps=3 format=3 uid="uid://bl2mcwee5o8ka"]
 
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_vmfr8"]
+[ext_resource type="Texture2D" uid="uid://bqb3hs3oi6b87" path="res://assets/puerta/puerta.png" id="1_d6sdq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tf2sf"]
-size = Vector2(508, 512)
+size = Vector2(544, 650)
 
 [node name="PuertaNiveles" type="Area2D"]
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = SubResource("NoiseTexture2D_vmfr8")
+position = Vector2(56.0001, -79.9999)
+scale = Vector2(1.15625, 1)
+texture = ExtResource("1_d6sdq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(2, 2)
+position = Vector2(48, -67)
 shape = SubResource("RectangleShape2D_tf2sf")

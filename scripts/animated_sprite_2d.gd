@@ -12,7 +12,6 @@ var jump_offsets = [
 
 
 func _ready() -> void:
-	
 	base_position = position
 	frame_changed.connect(_on_frame_changed)
 
