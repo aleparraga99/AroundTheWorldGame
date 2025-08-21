@@ -22,5 +22,8 @@ func _physics_process(delta: float) -> void:
 		direction = 1
 		$AnimatedSprite2D.flip_h = false
 		
-func _on_body_entered(body: Node) -> void:
-	pass # Replace with function body.
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	pass
+
+func _on_area_2d_body_shape_entered(body_rid: RID, body: Node2D, body_shape_index: int, local_shape_index: int) -> void:
+	queue_free()

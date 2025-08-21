@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://nc2wua71ykpk"]
+[gd_scene load_steps=12 format=3 uid="uid://nc2wua71ykpk"]
 
 [ext_resource type="Script" uid="uid://cmpo50eykeoyp" path="res://scripts/enemigo_1.gd" id="1_lsjj5"]
 [ext_resource type="Texture2D" uid="uid://bcca2mkdvyxvs" path="res://assets/enemyAnt/walk/1.png" id="2_fxgg6"]
@@ -42,17 +42,8 @@ animations = [{
 "speed": 20.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_50f3u"]
-size = Vector2(149, 47)
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_5qllt"]
-radius = 57.4543
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_yw3y7"]
-radius = 48.3322
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_unt6j"]
-size = Vector2(259, 58.25)
+size = Vector2(273, 120)
 
 [node name="enemigo1" type="CharacterBody2D"]
 collision_layer = 3
@@ -64,18 +55,11 @@ animation = &"walk"
 frame_progress = 0.0141056
 offset = Vector2(0, 35)
 
+[node name="Area2D" type="Area2D" parent="."]
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(4, 28)
-shape = SubResource("RectangleShape2D_50f3u")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
-position = Vector2(110, 3)
-shape = SubResource("CircleShape2D_5qllt")
-
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
-position = Vector2(-110, 12)
-shape = SubResource("CircleShape2D_yw3y7")
-
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="."]
-position = Vector2(2.5, 82.875)
+position = Vector2(9.5, 57)
 shape = SubResource("RectangleShape2D_unt6j")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_shape_entered" from="Area2D" to="." method="_on_area_2d_body_shape_entered"]

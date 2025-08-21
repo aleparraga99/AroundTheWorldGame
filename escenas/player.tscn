@@ -1,10 +1,9 @@
-[gd_scene load_steps=60 format=3 uid="uid://pts3eyus3iks"]
+[gd_scene load_steps=59 format=3 uid="uid://pts3eyus3iks"]
 
 [ext_resource type="Script" uid="uid://dlo7gl6kyc3x1" path="res://scripts/player.gd" id="1_t4yh2"]
 [ext_resource type="Texture2D" uid="uid://bvnbqtmanlx3d" path="res://assets/player/trow/1.png" id="2_2asft"]
 [ext_resource type="Texture2D" uid="uid://dlwox1dtpxstm" path="res://assets/player/fall/1.png" id="2_3jn0c"]
 [ext_resource type="Texture2D" uid="uid://iten3dbymajn" path="res://assets/player/jump/1.png" id="2_8iqq4"]
-[ext_resource type="Texture2D" uid="uid://d04f33gwh3ydb" path="res://assets/player/walk/1.png" id="2_ajhwb"]
 [ext_resource type="Texture2D" uid="uid://cth07dgcnhquq" path="res://assets/player/idle/1.png" id="2_enavi"]
 [ext_resource type="Texture2D" uid="uid://c12r00scr8o7s" path="res://assets/player/jump/2.png" id="3_f1da5"]
 [ext_resource type="Texture2D" uid="uid://c3j8ysxad36ki" path="res://assets/player/trow/2.png" id="3_vgdha"]
@@ -212,9 +211,6 @@ animations = [{
 "speed": 14.0
 }, {
 "frames": [{
-"duration": 1.0,
-"texture": ExtResource("2_ajhwb")
-}, {
 "duration": 1.0,
 "texture": ExtResource("12_ib4e7")
 }, {
