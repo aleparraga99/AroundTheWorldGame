@@ -36,7 +36,7 @@ script = ExtResource("1_uf24u")
 scale = Vector2(0.5, 0.442029)
 sprite_frames = SubResource("SpriteFrames_oxcn2")
 animation = &"giro"
-frame_progress = 0.0849329
+frame_progress = 0.346025
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_d058f")

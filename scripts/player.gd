@@ -1,9 +1,9 @@
 extends CharacterBody2D
-
 const VELOCIDAD = 300
 const FUERZA_DE_SALTO = -800
 const GRAVEDAD = 2500
 var proyectil = preload("res://escenas/weaponBug.tscn")
+@onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 
 func _ready() -> void:
 	pass
@@ -30,7 +30,6 @@ func _movimiento_del_player(delta):
 	var screen_size = get_viewport_rect().size
 
 	# Desplazamiento horizontal
-	
 	if Input.is_action_pressed("mover_derecha"):
 		movimiento.x += 1
 		$AnimatedSprite2D.flip_h = false
@@ -44,15 +43,15 @@ func _movimiento_del_player(delta):
 		$AnimatedSprite2D.play("throw") 
 		disparar()
 		 
-	elif movimiento.x != 0:
+	elif movimiento.x != 0 and  is_on_floor():
 		$AnimatedSprite2D.play("walk")
-	else:
+	elif is_on_floor():
 		$AnimatedSprite2D.play("idle")
 
 	if Input.is_action_just_pressed("saltar"):
 		if is_on_floor():
 			velocity.y = FUERZA_DE_SALTO
-			$AnimatedSprite2D.play("jump")
+			animated_sprite_2d.play("jump")
 		
 	# Normalizar y aplicar velocidad horizontal
 	movimiento = movimiento.normalized() * VELOCIDAD
