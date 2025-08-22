@@ -22,4 +22,4 @@ func playerExited(body):
 func _process(delta: float) -> void:
 	pass
 	if playerNear and Input.is_action_just_pressed("entrar_a_puerta"):
-		get_tree().change_scene_to_file("res://Tutorial.tscn")
+		get_tree().change_scene_to_file("res://escenas/niveles/Tutorial.tscn")
