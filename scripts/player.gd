@@ -4,7 +4,7 @@ const FUERZA_DE_SALTO = -800
 const GRAVEDAD = 2500
 var proyectil = preload("res://escenas/weaponBug.tscn")
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
-
+var arrojando = false
 func _ready() -> void:
 	pass
 

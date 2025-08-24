@@ -54,6 +54,7 @@
 [ext_resource type="Texture2D" uid="uid://b4108olndon3" path="res://assets/player/land/1.png" id="29_y4t0h"]
 [ext_resource type="Texture2D" uid="uid://ejv7pf67s52d" path="res://assets/player/land/2.png" id="30_vchxa"]
 [ext_resource type="Texture2D" uid="uid://bbqd1oii3hnq" path="res://assets/player/land/3.png" id="31_5uuta"]
+[ext_resource type="Script" uid="uid://43mwjukhyuo5" path="res://scripts/animated_sprite_2d.gd" id="36_f1da5"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_1npgd"]
 animations = [{
@@ -256,8 +257,6 @@ animations = [{
 "speed": 15.0
 }]
 
-[sub_resource type="GDScript" id="GDScript_h7o46"]
-
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_23yx3"]
 radius = 15.25
 height = 114.0
@@ -274,7 +273,7 @@ sprite_frames = SubResource("SpriteFrames_1npgd")
 animation = &"jump"
 frame = 4
 frame_progress = 0.299618
-script = SubResource("GDScript_h7o46")
+script = ExtResource("36_f1da5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(6, 1.49991)
