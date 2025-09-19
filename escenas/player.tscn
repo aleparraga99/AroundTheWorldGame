@@ -249,9 +249,7 @@ script = ExtResource("1_t4yh2")
 position = Vector2(6, -1.50008)
 scale = Vector2(0.215625, 0.208333)
 sprite_frames = SubResource("SpriteFrames_1npgd")
-animation = &"walk"
-frame = 10
-frame_progress = 1.0
+animation = &"idle"
 script = SubResource("GDScript_h7o46")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

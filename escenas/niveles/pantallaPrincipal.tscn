@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=4 uid="uid://hmn0pt0px0rk"]
+[gd_scene load_steps=11 format=4 uid="uid://hmn0pt0px0rk"]
 
 [ext_resource type="Texture2D" uid="uid://csdv14pq7r8og" path="res://assets/escenarios/fondoPrincipalEstatico.png" id="1_udkxa"]
 [ext_resource type="PackedScene" uid="uid://pts3eyus3iks" path="res://escenas/player.tscn" id="2_iu0ps"]
@@ -10,7 +10,10 @@
 [ext_resource type="PackedScene" uid="uid://nc2wua71ykpk" path="res://escenas/enemigo_1.tscn" id="8_wdu5y"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sh265"]
-size = Vector2(2134, 307.75)
+size = Vector2(2792, 40)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_udkxa"]
+size = Vector2(3157.5, 25)
 
 [node name="Menú principal" type="Node2D"]
 
@@ -25,7 +28,7 @@ stretch_mode = 1
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(1053, 585.875)
+position = Vector2(724, 452)
 shape = SubResource("RectangleShape2D_sh265")
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
@@ -80,3 +83,9 @@ tile_set = ExtResource("7_lp0fy")
 
 [node name="Enemigo1" parent="." instance=ExtResource("8_wdu5y")]
 position = Vector2(1064, 360)
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(917.25, 832)
+shape = SubResource("RectangleShape2D_udkxa")

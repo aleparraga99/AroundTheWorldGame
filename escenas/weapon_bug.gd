@@ -9,6 +9,7 @@ var velocidad : Vector2
 func _ready() -> void:
 	velocidad = VELOCIDAD_INICIAL
 	
+	
 func _physics_process(delta):
 	velocidad.y += GRAVEDAD * delta
 	position += velocidad * delta
