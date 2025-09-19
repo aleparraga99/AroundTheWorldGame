@@ -82,7 +82,7 @@ tile_map_data = PackedByteArray("AABDAB0AAAAdAA8AAABCAB0AAAAcAA8AAABBAB0AAAAbAA8
 tile_set = ExtResource("7_lp0fy")
 
 [node name="Enemigo1" parent="." instance=ExtResource("8_wdu5y")]
-position = Vector2(1064, 360)
+position = Vector2(1072, 280)
 
 [node name="Area2D" type="Area2D" parent="."]
 
