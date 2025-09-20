@@ -258,7 +258,6 @@ shape = SubResource("CapsuleShape2D_23yx3")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(-48, -57.5001)
-offset = Vector2(0, -150)
 
 [node name="HUD" parent="." instance=ExtResource("4_f3a2i")]
 offset_left = -43.0

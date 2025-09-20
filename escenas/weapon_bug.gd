@@ -14,3 +14,6 @@ func _physics_process(delta):
 	velocidad.y += GRAVEDAD * delta
 	position += velocidad * delta
 	$AnimatedSprite2D.play("giro") # Ver si se puede mejorar el llamado a la animacion
+
+func _on_visible_on_screen_enabler_2d_screen_exited() -> void:
+	queue_free()
