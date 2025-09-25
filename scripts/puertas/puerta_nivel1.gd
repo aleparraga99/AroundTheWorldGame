@@ -1,20 +1,20 @@
 extends Area2D
 
 var playerNear = false
-@onready var lbEnterDoorLevel1 = $lbEnterDoorLevel1
+@onready var label_enter_door_level_1 = $label_enter_door_level_1
 func _ready() -> void:
-	lbEnterDoorLevel1.visible = false 
+	label_enter_door_level_1.visible = false 
 	connect("body_entered", Callable(self, "playerEntered"))
 	connect("body_exited", Callable(self, "playerExited"))
  
 func playerEntered(body):
 	if body.name == "player":
 		playerNear = true
-		lbEnterDoorLevel1.visible = true
+		label_enter_door_level_1.visible = true
 func playerExited(body):
 	if body.name == "player":
 		playerNear = false
-		lbEnterDoorLevel1.visible = false
+		label_enter_door_level_1.visible = false
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://csdv14pq7r8og"
-path="res://.godot/imported/fondoPrincipalEstatico.png-27a6abb32343568d4df521a44fb3ea15.ctex"
+uid="uid://yyqdxgr44e4h"
+path="res://.godot/imported/FondoBoscoso.png-739530c5e63dc30a6d1ece5228f26a48.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/escenarios/fondoPrincipalEstatico.png"
-dest_files=["res://.godot/imported/fondoPrincipalEstatico.png-27a6abb32343568d4df521a44fb3ea15.ctex"]
+source_file="res://assets/escenarios/FondoBoscoso.png"
+dest_files=["res://.godot/imported/FondoBoscoso.png-739530c5e63dc30a6d1ece5228f26a48.ctex"]
 
 [params]
 

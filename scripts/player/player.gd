@@ -68,8 +68,7 @@ func _movimiento_del_player(delta):
 	movimiento = movimiento.normalized() * VELOCIDAD
 	velocity.x = movimiento.x
 
-	# Gravedad y límites de pantalla
+
 	velocity.y += GRAVEDAD * delta
-	#position.x = clamp(position.x, 0, screen_size.x)
-	#position.y = clamp(position.y, 0, screen_size.y)
+	
 	

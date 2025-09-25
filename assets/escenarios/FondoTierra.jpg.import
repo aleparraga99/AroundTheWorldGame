@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bf4kx7biuxmv3"
-path="res://.godot/imported/Mossy - FloatingPlatforms.png-edde507cdd88a3e82cf21236d765c202.ctex"
+uid="uid://d0m0bn30julos"
+path="res://.godot/imported/FondoTierra.jpg-b760f8915b6b6aeac8e5a8bcfca8d30b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/escenarios/Mossy - FloatingPlatforms.png"
-dest_files=["res://.godot/imported/Mossy - FloatingPlatforms.png-edde507cdd88a3e82cf21236d765c202.ctex"]
+source_file="res://assets/escenarios/FondoTierra.jpg"
+dest_files=["res://.godot/imported/FondoTierra.jpg-b760f8915b6b6aeac8e5a8bcfca8d30b.ctex"]
 
 [params]
 

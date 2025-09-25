@@ -1,6 +1,6 @@
 [gd_scene load_steps=13 format=3 uid="uid://nc2wua71ykpk"]
 
-[ext_resource type="Script" uid="uid://cmpo50eykeoyp" path="res://scripts/enemigo_1.gd" id="1_lsjj5"]
+[ext_resource type="Script" uid="uid://cmpo50eykeoyp" path="res://scripts/enemy/enemy_ant.gd" id="1_lsjj5"]
 [ext_resource type="Texture2D" uid="uid://bcca2mkdvyxvs" path="res://assets/enemyAnt/walk/1.png" id="2_fxgg6"]
 [ext_resource type="Texture2D" uid="uid://cnry5u64irjxl" path="res://assets/enemyAnt/walk/2.png" id="3_unt6j"]
 [ext_resource type="Texture2D" uid="uid://yo18iv2gg6qd" path="res://assets/enemyAnt/walk/3.png" id="4_5437d"]
@@ -58,7 +58,8 @@ position = Vector2(-8, -24)
 scale = Vector2(0.565, 0.546595)
 sprite_frames = SubResource("SpriteFrames_5wux1")
 animation = &"walk"
-frame_progress = 0.0141056
+frame = 7
+frame_progress = 0.747067
 
 [node name="Area2D" type="Area2D" parent="."]
 

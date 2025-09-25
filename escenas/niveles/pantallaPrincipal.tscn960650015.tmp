@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=4 uid="uid://hmn0pt0px0rk"]
 
-[ext_resource type="Texture2D" uid="uid://yyqdxgr44e4h" path="res://assets/escenarios/FondoBoscoso.png" id="1_qcnxj"]
+[ext_resource type="Texture2D" uid="uid://csdv14pq7r8og" path="res://assets/escenarios/fondoPrincipalEstatico.png" id="1_udkxa"]
 [ext_resource type="PackedScene" uid="uid://pts3eyus3iks" path="res://escenas/player.tscn" id="2_iu0ps"]
 [ext_resource type="PackedScene" uid="uid://bl2mcwee5o8ka" path="res://escenas/puerta_niveles.tscn" id="3_8iun6"]
 [ext_resource type="Script" uid="uid://dk7o23gpr0any" path="res://scripts/puertas/puerta_nivel1.gd" id="5_pltox"]
@@ -12,11 +12,11 @@ size = Vector2(2792, 40)
 [node name="Menú principal" type="Node2D"]
 
 [node name="TextureRect" type="TextureRect" parent="."]
-offset_left = -1672.0
+offset_left = -704.0
 offset_top = -496.0
-offset_right = 3760.0
-offset_bottom = 648.0
-texture = ExtResource("1_qcnxj")
+offset_right = 2328.0
+offset_bottom = 1352.0
+texture = ExtResource("1_udkxa")
 stretch_mode = 1
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
