@@ -20,16 +20,17 @@ func _physics_process(delta: float) -> void:
 
 
 func disparar():
-	var nuevo_proyectil = proyectil.instantiate() # Se instancia el proyectil
+
+		var nuevo_proyectil = proyectil.instantiate() # Se instancia el proyectil
 	
-	var coordenada_inicial_x_proyectil = position.x + 25 # Se inicializa la coordenada x 
-	var coordenada_inicial_y_proyectil = position.y - 30 # Se inicializa la coordena y
+		var coordenada_inicial_x_proyectil = position.x + 25 # Se inicializa la coordenada x 
+		var coordenada_inicial_y_proyectil = position.y - 30 # Se inicializa la coordena y
 	
-	var posicion_proyectil : Vector2 = Vector2(coordenada_inicial_x_proyectil, coordenada_inicial_y_proyectil) # Se le asiganna las coordenadas al proyectil
-	nuevo_proyectil.position = posicion_proyectil # Se crea un nuevo proyectil
+		var posicion_proyectil : Vector2 = Vector2(coordenada_inicial_x_proyectil, coordenada_inicial_y_proyectil) # Se le asiganna las coordenadas al proyectil
+		nuevo_proyectil.position = posicion_proyectil # Se crea un nuevo proyectil
 	
-	get_parent().add_child(nuevo_proyectil) # Se agrega la instancia del poyectil como nodo hijo de player
-	
+		get_parent().add_child(nuevo_proyectil) # Se agrega la instancia del poyectil como nodo hijo de player
+	 
 	
 func _movimiento_del_player(delta):
 	
@@ -53,7 +54,9 @@ func _movimiento_del_player(delta):
 	if Input.is_action_just_pressed("arrojar"):
 		animated_sprite_2d.play("throw") 
 		disparar()
-		
+	
+	
+	
 	elif movimiento.x != 0 and is_on_floor():
 		animated_sprite_2d.play("walk")
 	elif movimiento.x == 0 and animated_sprite_2d.is_playing() and (animated_sprite_2d.animation == "walk"):

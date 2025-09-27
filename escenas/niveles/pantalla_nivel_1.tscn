@@ -15,6 +15,9 @@ offset_bottom = 1088.0
 texture = ExtResource("3_f3ch5")
 stretch_mode = 1
 
+[node name="enemigo5" parent="TextureRect" instance=ExtResource("4_ul51f")]
+position = Vector2(10296, 921)
+
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(40, 392)
 
@@ -43,4 +46,16 @@ tile_map_data = PackedByteArray("AAD4/wkAAAAlAA0AAAD4/woAAAAlAA4AAAD4/wsAAAAlAA8
 tile_set = ExtResource("2_cv2ay")
 
 [node name="enemigo1" parent="." instance=ExtResource("4_ul51f")]
-position = Vector2(2776, 448)
+position = Vector2(4717, 278)
+
+[node name="enemigo2" parent="." instance=ExtResource("4_ul51f")]
+position = Vector2(2832, 448)
+
+[node name="enemigo3" parent="." instance=ExtResource("4_ul51f")]
+position = Vector2(7024, 440)
+
+[node name="enemigo4" parent="." instance=ExtResource("4_ul51f")]
+position = Vector2(5900, 450)
+
+[node name="enemigo5" parent="." instance=ExtResource("4_ul51f")]
+position = Vector2(8329, 443)
