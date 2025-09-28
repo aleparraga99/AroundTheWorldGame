@@ -6,12 +6,14 @@ const GRAVEDAD = 2500
 
 var proyectil = preload("res://escenas/weaponBug.tscn")
 var arrojando = false
+var orientacion_derecha = true
 
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 
 
 func _ready() -> void:
 	pass
+	
 
 
 func _physics_process(delta: float) -> void:
@@ -20,15 +22,28 @@ func _physics_process(delta: float) -> void:
 
 
 func disparar():
-	var nuevo_proyectil = proyectil.instantiate() # Se instancia el proyectil
 	
-	var coordenada_inicial_x_proyectil = position.x + 25 # Se inicializa la coordenada x 
-	var coordenada_inicial_y_proyectil = position.y - 30 # Se inicializa la coordena y
+	# Se instancia el proyectil	
+	var nuevo_proyectil = proyectil.instantiate() 
 	
-	var posicion_proyectil : Vector2 = Vector2(coordenada_inicial_x_proyectil, coordenada_inicial_y_proyectil) # Se le asiganna las coordenadas al proyectil
-	nuevo_proyectil.position = posicion_proyectil # Se crea un nuevo proyectil
+	# Se inicializan las coordenadas (x;y) del proyectil
+	var coordenada_inicial_x_proyectil = position.x + 25 
+	var coordenada_inicial_y_proyectil = position.y - 30 
 	
-	get_parent().add_child(nuevo_proyectil) # Se agrega la instancia del poyectil como nodo hijo de player
+	# Se le asignan las coordenas inicializadas al proyectil
+	var posicion_proyectil : Vector2 = Vector2(coordenada_inicial_x_proyectil, coordenada_inicial_y_proyectil)
+	
+	# Se crea un nuevo proyectil en la posición definida
+	nuevo_proyectil.position = posicion_proyectil 
+	
+	# Defino la direccion del disparo dependiendo la orientación del player
+	if orientacion_derecha:
+		nuevo_proyectil.velocidad = Vector2(1000,-500)
+	else:
+		nuevo_proyectil.velocidad = Vector2(-1000,-500)
+		
+	# Se agrega la instancia del poyectil como nodo hijo de player	
+	get_parent().add_child(nuevo_proyectil) 
 	
 	
 func _movimiento_del_player(delta):
@@ -38,10 +53,12 @@ func _movimiento_del_player(delta):
 
 	# Desplazamiento horizontal
 	if Input.is_action_pressed("mover_derecha"):
+		orientacion_derecha = true
 		movimiento.x += 1
 		animated_sprite_2d.flip_h = false
 	
 	elif Input.is_action_pressed("mover_izquierda"):
+		orientacion_derecha = false
 		movimiento.x -= 1
 		animated_sprite_2d.flip_h = true
 

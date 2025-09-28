@@ -193,7 +193,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"throw",
-"speed": 40.0
+"speed": 50.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -249,7 +249,9 @@ script = ExtResource("1_t4yh2")
 position = Vector2(6, -1.50008)
 scale = Vector2(0.215625, 0.208333)
 sprite_frames = SubResource("SpriteFrames_1npgd")
-animation = &"idle"
+animation = &"throw"
+frame = 11
+frame_progress = 1.0
 script = SubResource("GDScript_h7o46")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

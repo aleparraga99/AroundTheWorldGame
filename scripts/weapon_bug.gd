@@ -1,14 +1,14 @@
+class_name WeaponBug
 extends Node2D
 
 @export var GRAVEDAD = 2500
 const FUERZA_DE_DISPARO = 2500
-const VELOCIDAD_INICIAL : Vector2 = Vector2(1000,-500)
-var velocidad : Vector2
+
+@export var velocidad : Vector2 = Vector2(1000,-500)
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	velocidad = VELOCIDAD_INICIAL
-	
+	pass
 	
 func _physics_process(delta):
 	velocidad.y += GRAVEDAD * delta
