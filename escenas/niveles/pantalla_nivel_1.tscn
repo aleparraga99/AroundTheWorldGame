@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=4 uid="uid://cx1hqvmtsq4ec"]
+[gd_scene load_steps=6 format=4 uid="uid://cx1hqvmtsq4ec"]
 
 [ext_resource type="PackedScene" uid="uid://pts3eyus3iks" path="res://escenas/player.tscn" id="1_rmrmp"]
 [ext_resource type="TileSet" uid="uid://c5qnglud4hray" path="res://tiles/suelo.tres" id="2_cv2ay"]
 [ext_resource type="Texture2D" uid="uid://yyqdxgr44e4h" path="res://assets/escenarios/FondoBoscoso.png" id="3_f3ch5"]
 [ext_resource type="PackedScene" uid="uid://nc2wua71ykpk" path="res://escenas/enemigo_1.tscn" id="4_ul51f"]
+[ext_resource type="PackedScene" uid="uid://b4hsw0wklxlud" path="res://escenas/pausa.tscn" id="5_lul8p"]
 
 [node name="PantallaNivel1" type="Node2D"]
 
@@ -44,3 +45,5 @@ tile_set = ExtResource("2_cv2ay")
 
 [node name="enemigo1" parent="." instance=ExtResource("4_ul51f")]
 position = Vector2(2776, 448)
+
+[node name="pausa" parent="." instance=ExtResource("5_lul8p")]
