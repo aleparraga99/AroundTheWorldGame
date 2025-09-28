@@ -1,4 +1,3 @@
-class_name WeaponBug
 extends Node2D
 
 @export var GRAVEDAD = 2500

@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://cqk56xpi7cag5"]
 
 [ext_resource type="Texture2D" uid="uid://baa368bi254ar" path="res://assets/weaponBug/1.png" id="1_d058f"]
-[ext_resource type="Script" uid="uid://tq8tc1tca7ik" path="res://scripts/weapon_bug.gd" id="1_uf24u"]
+[ext_resource type="Script" uid="uid://tq8tc1tca7ik" path="res://scripts/weapon/weapon_bug.gd" id="1_uf24u"]
 [ext_resource type="Texture2D" uid="uid://del8hvghgur78" path="res://assets/weaponBug/2.png" id="2_uf24u"]
 [ext_resource type="Texture2D" uid="uid://bk0iw4p1giq78" path="res://assets/weaponBug/3.png" id="3_0nj1a"]
 [ext_resource type="Texture2D" uid="uid://bgnwlgd0hx5s1" path="res://assets/weaponBug/4.png" id="4_rcaxi"]

@@ -1,12 +1,15 @@
 extends CharacterBody2D
+class_name player
 
+# Atributos
 const VELOCIDAD = 300
 const FUERZA_DE_SALTO = -800
 const GRAVEDAD = 2500
 
 var proyectil = preload("res://escenas/weaponBug.tscn")
-var arrojando = false
-var orientacion_derecha = true
+
+var arrojando = false # Bandera
+var orientacion_derecha = true # Bandera
 
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 
@@ -14,8 +17,7 @@ var orientacion_derecha = true
 func _ready() -> void:
 	pass
 	
-
-
+	
 func _physics_process(delta: float) -> void:
 	_movimiento_del_player(delta)
 	move_and_slide()
@@ -56,7 +58,6 @@ func _movimiento_del_player(delta):
 		orientacion_derecha = true
 		movimiento.x += 1
 		animated_sprite_2d.flip_h = false
-	
 	elif Input.is_action_pressed("mover_izquierda"):
 		orientacion_derecha = false
 		movimiento.x -= 1
@@ -70,22 +71,19 @@ func _movimiento_del_player(delta):
 	if Input.is_action_just_pressed("arrojar"):
 		animated_sprite_2d.play("throw") 
 		disparar()
-		
 	elif movimiento.x != 0 and is_on_floor():
 		animated_sprite_2d.play("walk")
 	elif movimiento.x == 0 and animated_sprite_2d.is_playing() and (animated_sprite_2d.animation == "walk"):
 		animated_sprite_2d.stop()
 	
-	
+
 	if Input.is_action_just_pressed("saltar") and is_on_floor():
 			velocity.y = FUERZA_DE_SALTO
 			animated_sprite_2d.play("jump")
 		
-	# Normalizar y aplicar velocidad horizontal
+
 	movimiento = movimiento.normalized() * VELOCIDAD
 	velocity.x = movimiento.x
-
-
 	velocity.y += GRAVEDAD * delta
 	
 	
