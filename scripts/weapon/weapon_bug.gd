@@ -4,6 +4,7 @@ extends Node2D
 const FUERZA_DE_DISPARO = 2500
 
 @export var velocidad : Vector2 = Vector2(1000,-500)
+var daño: int = 25
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

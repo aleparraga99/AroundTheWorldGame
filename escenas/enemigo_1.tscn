@@ -43,7 +43,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3ms2x"]
-size = Vector2(189, 68)
+size = Vector2(166.5, 67)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_unt6j"]
 size = Vector2(120, 53)
@@ -64,10 +64,16 @@ frame_progress = 0.747067
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-11.25, -5.5)
 shape = SubResource("RectangleShape2D_3ms2x")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_unt6j")
 
-[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
-[connection signal="body_shape_entered" from="Area2D" to="." method="_on_area_2d_body_shape_entered"]
+[node name="TextureProgressBar" type="TextureProgressBar" parent="."]
+offset_left = -48.0
+offset_top = 8.0
+offset_right = 88.0
+offset_bottom = 23.0
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

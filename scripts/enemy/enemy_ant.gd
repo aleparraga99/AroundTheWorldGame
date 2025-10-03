@@ -5,8 +5,22 @@ const distanciaRecorrida = 200
 var direction = 1
 var posicionInicial : Vector2
 
+var vida_maxima : int = 100
+var vida_actual
+var daño_recibido : int = 25
+
+func die() -> void:
+	queue_free()
+		
+func recibir_daño():
+	vida_actual -= daño_recibido
+	if vida_actual <= 0:
+		die()
+		
 func _ready() -> void:
 	posicionInicial = global_position
+	vida_actual = vida_maxima
+	
 	
 func _physics_process(delta: float) -> void:
 	velocity.x = direction * velocidadEnemigo1
@@ -22,8 +36,12 @@ func _physics_process(delta: float) -> void:
 		direction = 1
 		$AnimatedSprite2D.flip_h = false
 		
-func _on_area_2d_body_entered(body: Node2D) -> void:
-	pass
+	if is_on_wall():
+		direction *= -1
+		$AnimatedSprite2D.flip_h = direction < 0
 
-func _on_area_2d_body_shape_entered(body_rid: RID, body: Node2D, body_shape_index: int, local_shape_index: int) -> void:
-	pass
+
+func _on_area_2d_area_entered(area: Area2D) -> void:
+	if area.is_in_group("ataque_player"):
+		recibir_daño()
+		area.queue_free()
