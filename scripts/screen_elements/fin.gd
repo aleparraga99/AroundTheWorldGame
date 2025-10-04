@@ -1,11 +1,12 @@
-extends Node
+extends CanvasLayer
 
 
+# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	get_tree().paused = false
-	$ColorRect.visible = false
-	$Label.visible = false
+	visible = false
 
-func _process(delta):
-	if Input.is_action_just_pressed("pausa"):
-			get_tree().change_scene_to_file("res://escenas/niveles/pantalla_nivel_1.tscn")
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	if Input.is_action_just_pressed("ok"):
+		get_tree().change_scene_to_file("res://escenas/niveles/pantallaPrincipal.tscn")

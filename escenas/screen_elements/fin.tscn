@@ -1,8 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://dshps4xmush3i"]
+[gd_scene load_steps=2 format=3 uid="uid://by4quvag87oe3"]
 
 [ext_resource type="Script" uid="uid://dl80ep1c40sf5" path="res://scripts/screen_elements/pausa.gd" id="1_g16tn"]
 
-[node name="pausa" type="CanvasLayer"]
+[node name="fin" type="CanvasLayer"]
 process_mode = 3
 script = ExtResource("1_g16tn")
 
@@ -12,13 +12,13 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0, 0, 0, 0.356863)
+color = Color(0.1812, 0.1812, 0.1812, 0.356863)
 
 [node name="Label" type="Label" parent="."]
-offset_left = 344.0
-offset_top = 78.0
-offset_right = 1172.0
-offset_bottom = 247.0
+offset_left = 328.0
+offset_top = 96.0
+offset_right = 1156.0
+offset_bottom = 265.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 60
 text = "               MUERTO
