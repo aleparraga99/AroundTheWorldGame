@@ -1,10 +1,10 @@
 [gd_scene load_steps=6 format=4 uid="uid://cx1hqvmtsq4ec"]
 
-[ext_resource type="PackedScene" uid="uid://pts3eyus3iks" path="res://escenas/player.tscn" id="1_rmrmp"]
+[ext_resource type="PackedScene" uid="uid://pts3eyus3iks" path="res://escenas/player/player.tscn" id="1_rmrmp"]
 [ext_resource type="TileSet" uid="uid://c5qnglud4hray" path="res://tiles/suelo.tres" id="2_cv2ay"]
 [ext_resource type="Texture2D" uid="uid://yyqdxgr44e4h" path="res://assets/escenarios/FondoBoscoso.png" id="3_f3ch5"]
-[ext_resource type="PackedScene" uid="uid://nc2wua71ykpk" path="res://escenas/enemigo_1.tscn" id="4_ul51f"]
-[ext_resource type="PackedScene" uid="uid://b4hsw0wklxlud" path="res://escenas/pausa.tscn" id="5_lul8p"]
+[ext_resource type="PackedScene" uid="uid://nc2wua71ykpk" path="res://escenas/enemys/enemigo_1.tscn" id="4_ul51f"]
+[ext_resource type="PackedScene" uid="uid://b4hsw0wklxlud" path="res://escenas/screen_elements/pausa.tscn" id="5_lul8p"]
 
 [node name="PantallaNivel1" type="Node2D"]
 
@@ -16,62 +16,26 @@ offset_bottom = 1088.0
 texture = ExtResource("3_f3ch5")
 stretch_mode = 1
 
-[node name="enemigo1" parent="TextureRect" instance=ExtResource("4_ul51f")]
-position = Vector2(4984, 928)
-
-[node name="enemigo1" parent="TextureRect/enemigo1" instance=ExtResource("4_ul51f")]
-position = Vector2(2768, 451)
-
-[node name="enemigo2" parent="TextureRect" instance=ExtResource("4_ul51f")]
-position = Vector2(6232, 768)
-
-[node name="enemigo3" parent="TextureRect" instance=ExtResource("4_ul51f")]
-position = Vector2(7040, 928)
-
-[node name="enemigo4" parent="TextureRect" instance=ExtResource("4_ul51f")]
-position = Vector2(7648, 928)
-
-[node name="enemigo5" parent="TextureRect" instance=ExtResource("4_ul51f")]
-position = Vector2(8536, 936)
-
-[node name="enemigo6" parent="TextureRect" instance=ExtResource("4_ul51f")]
-position = Vector2(8184, 928)
-
-[node name="enemigo7" parent="TextureRect" instance=ExtResource("4_ul51f")]
-position = Vector2(10368, 928)
-
-[node name="enemigo8" parent="TextureRect" instance=ExtResource("4_ul51f")]
-position = Vector2(10840, 920)
-
-[node name="enemigo9" parent="TextureRect" instance=ExtResource("4_ul51f")]
-position = Vector2(9376, 928)
-
-[node name="enemigo10" parent="TextureRect" instance=ExtResource("4_ul51f")]
-position = Vector2(9824, 931)
-
-[node name="enemigo11" parent="TextureRect" instance=ExtResource("4_ul51f")]
-position = Vector2(10096, 936)
-
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(40, 392)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
-polygon = PackedVector2Array(-1224, 152, 144, 152, 144, 40, 400, 40, 400, -56, 592, -56, 592, -136, 768, -136, 768, -184, 912, -184, 912, -232, 1640, -232, 1656, -216, 1664, -152, 1744, -152, 1744, -88, 144, 296, -1216, 264)
+polygon = PackedVector2Array(-1208, 160, 144, 152, 144, 40, 400, 40, 400, -56, 592, -56, 592, -136, 768, -136, 768, -184, 912, -184, 912, -232, 1640, -232, 1656, -216, 1664, -152, 1744, -152, 1744, -88, 144, 296, -1216, 264)
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D"]
 polygon = PackedVector2Array(1744, -88, 2184, -88, 2192, -8, 2256, -8, 2256, 88, 3784, 88, 3968, 88, 3968, 8, 4112, 8, 4112, -72, 5024, -72, 5328, -72, 5328, 96, 6336, 88, 6336, -8, 6528, -8, 6528, 88, 7504, 88, 7512, 0, 7696, 0, 7696, 88, 9472, 88, 9472, -24, 9664, -24, 9664, 144, 9664, 424, 4496, 432, 1816, 328)
 
 [node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="StaticBody2D"]
-polygon = PackedVector2Array(9664, 152, 9888, 152, 9888, 232, 10112, 232, 10104, 400, 10192, 400, 10208, 552, 10288, 552, 10288, 696, 12920, 696, 12920, 664, 13016, 664, 13024, 608, 13104, 600, 13120, 552, 13168, 544, 13168, 504, 13529.8, 504, 13564.3, 476.52, 13600, 448, 13608, 408, 13656, 408, 13648, 344, 14398.5, 344, 14400, 280, 14528, 280, 14528, 200, 15217, 200, 15216, 160, 15360, 152, 15360, 72, 18592, 56, 18584, 112, 18480, 216, 17376, 232, 17392, 664, 17448, 688, 17448, 784, 17392, 792, 17416, 896, 13784, 856, 11504, 856, 9656, 840)
+polygon = PackedVector2Array(9664, 152, 9888, 152, 9888, 232, 10112, 232, 10104, 400, 10192, 400, 10208, 552, 10288, 552, 10288, 696, 12920, 696, 12920, 664, 13016, 664, 13024, 608, 13104, 600, 13120, 552, 13168, 544, 13168, 504, 13529.8, 504, 13564.3, 476.52, 13600, 448, 13608, 408, 13656, 408, 13648, 344, 14398.5, 344, 14400, 280, 14528, 280, 14528, 200, 15217, 200, 15216, 160, 15360, 152, 15360, 72, 18592, 56, 18584, 112, 18480, 216, 17376, 232, 17392, 664, 17448, 688, 17448, 784, 17392, 792, 17392, 888, 13784, 856, 11504, 856, 9656, 840)
 
 [node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="StaticBody2D"]
 polygon = PackedVector2Array(18952, 56, 18944, 232, 18800, 232, 18792, 312, 18824, 352, 18928, 360, 18928, 480, 17592, 488, 17544, 528, 17544, 568, 17560, 600, 17608, 640, 17696, 648, 19008, 656, 19024, 768, 19064, 744, 19120, 840, 19616, 840, 19640, 800, 19688, 808, 19704, 784, 19696, 720, 19968, 712, 20032, 640, 20072, 632, 20144, 616, 20200, 592, 20224, 544, 20328, 544, 20408, 456, 20400, 360, 20520, 360, 20528, 200, 20304, 200, 20304, 24, 19216, 16, 19200, 56)
 
 [node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="StaticBody2D"]
-polygon = PackedVector2Array(17392, 864, 17416, 896, 18912, 880, 18944, 992, 18976, 992, 18976, 1096, 19744, 1088, 19744, 1000, 19776, 984, 19808, 936, 20024, 928, 20064, 856, 20184, 856, 20208, 792, 20480, 792, 20480, 704, 20504, 680, 20520, 624, 20576, 592, 20640, 576, 20648, 488, 20688, 448, 20744, 416, 20792, 392, 20832, 392, 20832, 328, 20896, 328, 20896, 312, 20896, 272, 20928, 264, 20928, 232, 21016, 232, 21048, 264, 22048, 264, 23184, 264, 23192, 264, 23224, 552, 19736, 1200, 17336, 1160)
+polygon = PackedVector2Array(17392, 864, 17416, 912, 18912, 880, 18944, 992, 18976, 992, 18976, 1096, 19744, 1088, 19744, 1000, 19776, 984, 19808, 936, 20024, 928, 20064, 856, 20184, 856, 20208, 792, 20480, 792, 20480, 704, 20504, 680, 20520, 624, 20576, 592, 20640, 576, 20648, 488, 20688, 448, 20744, 416, 20792, 392, 20832, 392, 20832, 328, 20896, 328, 20896, 312, 20896, 272, 20928, 264, 20928, 232, 21016, 232, 21048, 264, 22048, 264, 23184, 264, 23192, 264, 23224, 552, 19736, 1200, 17336, 1160)
 
 [node name="player" parent="." instance=ExtResource("1_rmrmp")]
-position = Vector2(-720, 488)
+position = Vector2(-720, 480)
 
 [node name="Layer0" type="TileMapLayer" parent="."]
 use_parent_material = true
@@ -81,8 +45,6 @@ tile_set = ExtResource("2_cv2ay")
 
 [node name="enemigo1" parent="." instance=ExtResource("4_ul51f")]
 position = Vector2(2800, 448)
-
-[node name="pausa" parent="." instance=ExtResource("5_lul8p")]
 
 [node name="enemigo8" parent="." instance=ExtResource("4_ul51f")]
 position = Vector2(10680, 1064)
@@ -125,3 +87,38 @@ position = Vector2(19717, 384)
 
 [node name="enemigo21" parent="." instance=ExtResource("4_ul51f")]
 position = Vector2(22096, 616)
+
+[node name="enemigo2" parent="." instance=ExtResource("4_ul51f")]
+position = Vector2(4760, 288)
+
+[node name="enemigo3" parent="." instance=ExtResource("4_ul51f")]
+position = Vector2(5568, 448)
+
+[node name="enemigo4" parent="." instance=ExtResource("4_ul51f")]
+position = Vector2(6176, 448)
+
+[node name="enemigo5" parent="." instance=ExtResource("4_ul51f")]
+position = Vector2(7064, 456)
+
+[node name="enemigo6" parent="." instance=ExtResource("4_ul51f")]
+position = Vector2(6712, 448)
+
+[node name="enemigo7" parent="." instance=ExtResource("4_ul51f")]
+position = Vector2(8896, 448)
+
+[node name="enemigo22" parent="." instance=ExtResource("4_ul51f")]
+position = Vector2(9368, 440)
+
+[node name="enemigo23" parent="." instance=ExtResource("4_ul51f")]
+position = Vector2(7904, 448)
+
+[node name="enemigo24" parent="." instance=ExtResource("4_ul51f")]
+position = Vector2(8352, 451)
+
+[node name="enemigo25" parent="." instance=ExtResource("4_ul51f")]
+position = Vector2(8624, 456)
+
+[node name="enemigo26" parent="." instance=ExtResource("4_ul51f")]
+position = Vector2(3512, 448)
+
+[node name="pausa" parent="." instance=ExtResource("5_lul8p")]

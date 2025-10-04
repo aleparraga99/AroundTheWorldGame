@@ -1,14 +1,14 @@
 [gd_scene load_steps=8 format=4 uid="uid://hmn0pt0px0rk"]
 
 [ext_resource type="Texture2D" uid="uid://yyqdxgr44e4h" path="res://assets/escenarios/FondoBoscoso.png" id="1_qcnxj"]
-[ext_resource type="PackedScene" uid="uid://pts3eyus3iks" path="res://escenas/player.tscn" id="2_iu0ps"]
-[ext_resource type="PackedScene" uid="uid://bl2mcwee5o8ka" path="res://escenas/puerta_niveles.tscn" id="3_8iun6"]
+[ext_resource type="PackedScene" uid="uid://pts3eyus3iks" path="res://escenas/player/player.tscn" id="2_iu0ps"]
+[ext_resource type="PackedScene" uid="uid://bl2mcwee5o8ka" path="res://escenas/niveles/puerta_niveles.tscn" id="3_8iun6"]
 [ext_resource type="Script" uid="uid://dk7o23gpr0any" path="res://scripts/puertas/puerta_nivel1.gd" id="5_pltox"]
-[ext_resource type="PackedScene" uid="uid://b4hsw0wklxlud" path="res://escenas/pausa.tscn" id="6_x7sdq"]
+[ext_resource type="PackedScene" uid="uid://b4hsw0wklxlud" path="res://escenas/screen_elements/pausa.tscn" id="6_x7sdq"]
 [ext_resource type="TileSet" uid="uid://c5qnglud4hray" path="res://tiles/suelo.tres" id="7_lp0fy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sh265"]
-size = Vector2(2792, 40)
+size = Vector2(2784, 136)
 
 [node name="Menú principal" type="Node2D"]
 
@@ -23,7 +23,7 @@ stretch_mode = 1
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(724, 452)
+position = Vector2(728, 500)
 shape = SubResource("RectangleShape2D_sh265")
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]

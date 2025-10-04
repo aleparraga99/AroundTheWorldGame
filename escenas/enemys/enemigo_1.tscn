@@ -61,13 +61,13 @@ animation = &"walk"
 frame = 7
 frame_progress = 0.747067
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Area2D" type="Area2D" parent="." groups=["ataque_enemy"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(-11.25, -5.5)
 shape = SubResource("RectangleShape2D_3ms2x")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["ataque_enemy"]]
 shape = SubResource("RectangleShape2D_unt6j")
 
 [node name="TextureProgressBar" type="TextureProgressBar" parent="."]

@@ -6,17 +6,33 @@ const VELOCIDAD = 300
 const FUERZA_DE_SALTO = -800
 const GRAVEDAD = 2500
 
-var proyectil = preload("res://escenas/weaponBug.tscn")
+var proyectil = preload("res://escenas/player/weaponBug.tscn")
 
 var arrojando = false # Bandera
 var orientacion_derecha = true # Bandera
 
+var vida_max: int = 100
+var vida_actual
+var daño_recibido: int = 10
+
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 
+func die():
+	queue_free()
+	get_tree().change_scene_to_file("res://escenas/screen_elements/fin.tscn")
+
+func recibir_daño(): 
+	vida_actual -= daño_recibido
+	print(str(vida_actual))
+	if vida_actual <= 0:
+		die()
 
 func _ready() -> void:
-	pass
+	vida_actual = vida_max
 	
+
+
+
 	
 func _physics_process(delta: float) -> void:
 	_movimiento_del_player(delta)
@@ -87,3 +103,10 @@ func _movimiento_del_player(delta):
 	velocity.y += GRAVEDAD * delta
 	
 	
+func _on_area_2d_area_entered(area: Area2D) -> void:
+	if area.is_in_group("ataque_enemy"):
+		recibir_daño()
+
+
+func _on_area_2d_area_exited(area: Area2D) -> void:
+	pass # Replace with function body.

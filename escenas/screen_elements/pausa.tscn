@@ -1,0 +1,24 @@
+[gd_scene load_steps=2 format=3 uid="uid://b4hsw0wklxlud"]
+
+[ext_resource type="Script" uid="uid://dl80ep1c40sf5" path="res://scripts/screen_elements/pausa.gd" id="1_wk6u8"]
+
+[node name="pausa" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_wk6u8")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.356863)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 530.0
+offset_top = 116.0
+offset_right = 724.0
+offset_bottom = 199.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 60
+text = "PAUSA"
