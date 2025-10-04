@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=4 uid="uid://cx1hqvmtsq4ec"]
+[gd_scene load_steps=10 format=4 uid="uid://cx1hqvmtsq4ec"]
 
 [ext_resource type="Script" uid="uid://daao88chwia6h" path="res://scripts/niveles/pantalla_nivel_1.gd" id="1_i8r42"]
 [ext_resource type="PackedScene" uid="uid://pts3eyus3iks" path="res://escenas/player/player.tscn" id="1_rmrmp"]
@@ -8,14 +8,16 @@
 [ext_resource type="PackedScene" uid="uid://b4hsw0wklxlud" path="res://escenas/screen_elements/pausa.tscn" id="5_lul8p"]
 [ext_resource type="PackedScene" uid="uid://by4quvag87oe3" path="res://escenas/screen_elements/fin.tscn" id="6_fpcv8"]
 [ext_resource type="Script" uid="uid://r68a57id84ew" path="res://scripts/screen_elements/fin.gd" id="8_vl4bj"]
+[ext_resource type="Texture2D" uid="uid://bg4ejgvuii1y0" path="res://assets/escenarios/images.jpg" id="9_56y0f"]
 
 [node name="PantallaNivel1" type="Node2D"]
 script = ExtResource("1_i8r42")
 
 [node name="TextureRect" type="TextureRect" parent="."]
+z_index = -1
 offset_left = -1472.0
 offset_top = -480.0
-offset_right = 9656.0
+offset_right = 9448.0
 offset_bottom = 1088.0
 texture = ExtResource("3_f3ch5")
 stretch_mode = 1
@@ -129,3 +131,48 @@ position = Vector2(3512, 448)
 
 [node name="fin" parent="." instance=ExtResource("6_fpcv8")]
 script = ExtResource("8_vl4bj")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+z_index = -1
+offset_left = 9624.0
+offset_top = -408.0
+offset_right = 23344.0
+offset_bottom = 680.0
+texture = ExtResource("3_f3ch5")
+stretch_mode = 1
+
+[node name="TextureRect3" type="TextureRect" parent="."]
+z_index = -1
+offset_left = 10104.0
+offset_top = 624.0
+offset_right = 14585.0
+offset_bottom = 1104.0
+texture = ExtResource("9_56y0f")
+stretch_mode = 1
+
+[node name="TextureRect5" type="TextureRect" parent="."]
+z_index = -1
+offset_left = 17304.0
+offset_top = 488.0
+offset_right = 20296.0
+offset_bottom = 1528.0
+texture = ExtResource("9_56y0f")
+stretch_mode = 1
+
+[node name="TextureRect6" type="TextureRect" parent="."]
+z_index = -1
+offset_left = 20264.0
+offset_top = 632.0
+offset_right = 21016.0
+offset_bottom = 1392.0
+texture = ExtResource("9_56y0f")
+stretch_mode = 1
+
+[node name="TextureRect4" type="TextureRect" parent="."]
+z_index = -1
+offset_left = -1472.0
+offset_top = -480.0
+offset_right = 9832.0
+offset_bottom = 600.0
+texture = ExtResource("3_f3ch5")
+stretch_mode = 1
