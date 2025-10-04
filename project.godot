@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Around the world"
-run/main_scene="uid://hmn0pt0px0rk"
+run/main_scene="uid://ds0qyses5nisk"
 config/features=PackedStringArray("4.4", "Forward Plus")
 
 [display]
