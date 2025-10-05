@@ -46,7 +46,7 @@ z_index = 100
 position = Vector2(-112, 368)
 
 [node name="PuertaNivel1" parent="." instance=ExtResource("3_8iun6")]
-position = Vector2(1520, 360)
+position = Vector2(1528, 368)
 scale = Vector2(0.15, 0.25)
 script = ExtResource("5_pltox")
 
@@ -54,13 +54,13 @@ script = ExtResource("5_pltox")
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -642.0
+offset_left = -693.334
 offset_top = -832.0
-offset_right = 642.0
-offset_bottom = -672.0
+offset_right = 1118.67
+offset_bottom = -640.0
 grow_horizontal = 2
-theme_override_font_sizes/font_size = 100
-text = "Press \"i\" to get into Level 1"
+theme_override_font_sizes/font_size = 140
+text = "Presiona \"i\" para entrar"
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
@@ -112,8 +112,26 @@ Espacio:   Saltar
 H:   Atacar 
 Esc:   Pausa"
 
-[node name="Cartel-de-madera-cartel-animado-de-madera-11562899396Zokd5Pzibo-removebg-preview" type="Sprite2D" parent="."]
+[node name="cartel_teclas" type="Sprite2D" parent="."]
 z_index = -1
 position = Vector2(152, 345.563)
 scale = Vector2(0.428138, 0.576485)
 texture = ExtResource("11_opx63")
+
+[node name="cartel_indicacion" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(1024, 352)
+scale = Vector2(0.615385, 0.505198)
+texture = ExtResource("11_opx63")
+
+[node name="cartel_indicacion" type="Label" parent="cartel_indicacion"]
+offset_left = -169.0
+offset_top = -190.025
+offset_right = 197.0
+offset_bottom = -19.0245
+theme_override_font_sizes/font_size = 37
+text = "Atraviesa la puerta
+para comenzar
+ la aventura"
+
+[editable path="PuertaNivel1"]
