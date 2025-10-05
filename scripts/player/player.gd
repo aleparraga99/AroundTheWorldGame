@@ -15,6 +15,7 @@ var proyectil = preload("res://escenas/player/weaponBug.tscn")
 
 var arrojando = false
 var orientacion_derecha = true
+var caminando = false
 
 signal muerto
 
@@ -57,23 +58,33 @@ func disparar():
 		nuevo_proyectil.velocidad = Vector2(-1000,-500)
 		
 	get_parent().add_child(nuevo_proyectil) 
+	
 
+		
+		
 func _movimiento_del_player(delta):
+	
 	var movimiento = Vector2.ZERO
 	if Input.is_action_pressed("mover_derecha"):
+		caminando = true
 		orientacion_derecha = true
 		movimiento.x += 1
 		animated_sprite_2d.flip_h = false
+		
 	elif Input.is_action_pressed("mover_izquierda"):
+		caminando = true
 		orientacion_derecha = false
 		movimiento.x -= 1
 		animated_sprite_2d.flip_h = true
-
+	
+		
+		
 	if not animated_sprite_2d.is_playing() and (animated_sprite_2d.animation == "walk" or animated_sprite_2d.animation == "jump" or animated_sprite_2d.animation == "throw") and is_on_floor():
 		animated_sprite_2d.play("idle")
 		
 	if Input.is_action_just_pressed("arrojar"):
 		animated_sprite_2d.play("throw") 
+		$sonido_arrojar.play()
 		disparar()
 	elif movimiento.x != 0 and is_on_floor():
 		animated_sprite_2d.play("walk")
@@ -87,6 +98,7 @@ func _movimiento_del_player(delta):
 	movimiento = movimiento.normalized() * VELOCIDAD
 	velocity.x = movimiento.x
 	velocity.y += GRAVEDAD * delta
+
 
 
 func _on_area_2d_area_entered(area: Area2D) -> void:

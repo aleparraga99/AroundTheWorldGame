@@ -1,4 +1,4 @@
-[gd_scene load_steps=59 format=3 uid="uid://pts3eyus3iks"]
+[gd_scene load_steps=61 format=3 uid="uid://pts3eyus3iks"]
 
 [ext_resource type="Script" uid="uid://dlo7gl6kyc3x1" path="res://scripts/player/player.gd" id="1_t4yh2"]
 [ext_resource type="Texture2D" uid="uid://bvnbqtmanlx3d" path="res://assets/player/trow/1.png" id="2_2asft"]
@@ -54,6 +54,8 @@
 [ext_resource type="Texture2D" uid="uid://b4108olndon3" path="res://assets/player/land/1.png" id="29_y4t0h"]
 [ext_resource type="Texture2D" uid="uid://ejv7pf67s52d" path="res://assets/player/land/2.png" id="30_vchxa"]
 [ext_resource type="Texture2D" uid="uid://bbqd1oii3hnq" path="res://assets/player/land/3.png" id="31_5uuta"]
+[ext_resource type="AudioStream" uid="uid://c1blnh31umqje" path="res://assets/musica/caminar.mp3" id="55_lja60"]
+[ext_resource type="AudioStream" uid="uid://cvo7owhelpy8x" path="res://assets/musica/arrojar.mp3" id="56_sbuf3"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_1npgd"]
 animations = [{
@@ -261,10 +263,6 @@ position = Vector2(-48, -57.5001)
 zoom = Vector2(0.9, 0.9)
 
 [node name="HUD" parent="." instance=ExtResource("4_f3a2i")]
-offset_left = -43.0
-offset_top = 45.0
-offset_right = -43.0
-offset_bottom = 45.0
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(0, -1.19209e-07)
@@ -275,6 +273,14 @@ shape = SubResource("CapsuleShape2D_08wia")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(8, 0)
 shape = SubResource("CapsuleShape2D_23yx3")
+
+[node name="sonido_caminar" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("55_lja60")
+volume_db = 10.0
+
+[node name="sonido_arrojar" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("56_sbuf3")
+volume_db = -12.0
 
 [connection signal="frame_changed" from="AnimatedSprite2D" to="." method="_ready"]
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
