@@ -13,10 +13,10 @@ position = Vector2(1232, -129)
 script = ExtResource("1_3267m")
 
 [node name="TextureRect" type="TextureRect" parent="."]
-offset_left = -1224.0
-offset_top = 139.0
-offset_right = 360.0
-offset_bottom = 931.0
+offset_left = -1232.0
+offset_top = 129.0
+offset_right = 352.0
+offset_bottom = 921.0
 texture = ExtResource("2_brnf4")
 metadata/_edit_use_anchors_ = true
 
