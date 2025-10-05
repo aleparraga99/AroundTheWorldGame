@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://ds0qyses5nisk"]
+[gd_scene load_steps=6 format=3 uid="uid://ds0qyses5nisk"]
 
 [ext_resource type="Texture2D" uid="uid://b0of4sbhj1tot" path="res://assets/escenarios/2.jpg" id="1_ewqxe"]
 [ext_resource type="Script" uid="uid://dd7r31j6i8wbk" path="res://menu_de_inicio.gd" id="1_xm355"]
 [ext_resource type="Texture2D" uid="uid://dj7o7d60ngrrx" path="res://assets/escenarios/foto_de_inicio.png" id="2_71fcd"]
 [ext_resource type="Texture2D" uid="uid://xreiveqgc4fp" path="res://assets/escenarios/Blanco_Negro_Tijera_Recuadro_Logo-removebg-preview.png" id="3_xm355"]
+
+[sub_resource type="FontVariation" id="FontVariation_xm355"]
 
 [node name="menu_de_inicio" type="Node2D"]
 position = Vector2(1232, -129)
@@ -34,6 +36,8 @@ offset_left = -1128.0
 offset_top = 204.0
 offset_right = -266.0
 offset_bottom = 345.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_xm355")
 theme_override_font_sizes/font_size = 83
 text = "AROUND THE WORLD"
 metadata/_edit_use_anchors_ = true
@@ -44,12 +48,12 @@ offset_top = 336.0
 offset_right = -200.0
 offset_bottom = 848.0
 theme_override_font_sizes/font_size = 36
-text = "Este demo forma parte del espacio curricular
+text = "Esta demo forma parte del espacio curricular de
  \"Diseño e implementación de sistemas\" del 3° año  de
  la carrera de Análisis, desarrollo y programación 
-de aplicacines .
+de aplicaciones .
 
-Al ser una demo, la jugabilidad es algo básica. Aún 
-así espero que te guste y que estés disfrutando 
-de la TEKNÉ"
+Al ser una demo, la jugabilidad y escenarios son
+ algo básicos. Aún  así espero que te guste y que estés 
+disfrutando de la TEKNÉ"
 metadata/_edit_use_anchors_ = true

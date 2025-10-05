@@ -30,6 +30,7 @@ animations = [{
 radius = 17.8885
 
 [node name="WeaponBug" type="Area2D" groups=["ataque_player"]]
+z_index = 9
 script = ExtResource("1_uf24u")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

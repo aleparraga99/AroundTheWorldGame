@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bqb3hs3oi6b87" path="res://assets/puerta/puerta.png" id="1_d6sdq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tf2sf"]
-size = Vector2(544, 650)
+size = Vector2(176, 301)
 
 [node name="PuertaNiveles" type="Area2D"]
 metadata/_edit_group_ = true
