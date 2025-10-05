@@ -7,8 +7,8 @@
 [ext_resource type="Script" uid="uid://dk7o23gpr0any" path="res://scripts/puertas/puerta_nivel1.gd" id="5_pltox"]
 [ext_resource type="PackedScene" uid="uid://b4hsw0wklxlud" path="res://escenas/screen_elements/pausa.tscn" id="6_x7sdq"]
 [ext_resource type="TileSet" uid="uid://c5qnglud4hray" path="res://tiles/suelo.tres" id="7_lp0fy"]
-[ext_resource type="PackedScene" uid="uid://by4quvag87oe3" path="res://escenas/screen_elements/fin.tscn" id="8_udkxa"]
-[ext_resource type="Script" uid="uid://r68a57id84ew" path="res://scripts/screen_elements/fin.gd" id="9_iu0ps"]
+[ext_resource type="PackedScene" uid="uid://by4quvag87oe3" path="res://escenas/screen_elements/muerto.tscn" id="8_udkxa"]
+[ext_resource type="Script" uid="uid://r68a57id84ew" path="res://scripts/screen_elements/muerte.gd" id="9_iu0ps"]
 [ext_resource type="Texture2D" uid="uid://liu0cagngc6p" path="res://assets/escenarios/rocas-removebg-preview.png" id="10_8iun6"]
 [ext_resource type="Texture2D" uid="uid://bj2ly4y7e2y6q" path="res://assets/escenarios/cartel-de-madera-cartel-animado-de-madera-11562899396zokd5pzibo-removebg-preview.png" id="11_opx63"]
 

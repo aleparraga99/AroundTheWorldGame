@@ -6,8 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://yyqdxgr44e4h" path="res://assets/escenarios/FondoBoscoso.png" id="3_f3ch5"]
 [ext_resource type="PackedScene" uid="uid://nc2wua71ykpk" path="res://escenas/enemys/enemigo_1.tscn" id="4_ul51f"]
 [ext_resource type="PackedScene" uid="uid://b4hsw0wklxlud" path="res://escenas/screen_elements/pausa.tscn" id="5_lul8p"]
-[ext_resource type="PackedScene" uid="uid://by4quvag87oe3" path="res://escenas/screen_elements/fin.tscn" id="6_fpcv8"]
-[ext_resource type="Script" uid="uid://r68a57id84ew" path="res://scripts/screen_elements/fin.gd" id="8_vl4bj"]
+[ext_resource type="PackedScene" uid="uid://by4quvag87oe3" path="res://escenas/screen_elements/muerto.tscn" id="6_fpcv8"]
+[ext_resource type="Script" uid="uid://r68a57id84ew" path="res://scripts/screen_elements/muerte.gd" id="8_vl4bj"]
 [ext_resource type="Texture2D" uid="uid://bg4ejgvuii1y0" path="res://assets/escenarios/images.jpg" id="9_56y0f"]
 [ext_resource type="PackedScene" uid="uid://bl2mcwee5o8ka" path="res://escenas/niveles/puerta_niveles.tscn" id="10_56y0f"]
 [ext_resource type="Texture2D" uid="uid://liu0cagngc6p" path="res://assets/escenarios/rocas-removebg-preview.png" id="11_ln8vh"]
@@ -231,5 +231,7 @@ offset_bottom = -27.6796
 theme_override_font_sizes/font_size = 56
 text = "Cuidado con 
 las hormigas"
+
+[connection signal="body_entered" from="PuertaNiveles" to="." method="_on_puerta_niveles_body_entered"]
 
 [editable path="PuertaNiveles"]

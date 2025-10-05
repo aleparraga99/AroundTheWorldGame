@@ -24,6 +24,7 @@ window/size/borderless=true
 
 ataque_player=""
 ataque_enemy=""
+cuerpo_player=""
 
 [input]
 

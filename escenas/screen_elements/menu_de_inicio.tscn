@@ -1,37 +1,35 @@
 [gd_scene load_steps=6 format=3 uid="uid://ds0qyses5nisk"]
 
-[ext_resource type="Texture2D" uid="uid://b0of4sbhj1tot" path="res://assets/escenarios/2.jpg" id="1_ewqxe"]
-[ext_resource type="Script" uid="uid://dd7r31j6i8wbk" path="res://menu_de_inicio.gd" id="1_xm355"]
-[ext_resource type="Texture2D" uid="uid://dj7o7d60ngrrx" path="res://assets/escenarios/foto_de_inicio.png" id="2_71fcd"]
-[ext_resource type="Texture2D" uid="uid://xreiveqgc4fp" path="res://assets/escenarios/Blanco_Negro_Tijera_Recuadro_Logo-removebg-preview.png" id="3_xm355"]
+[ext_resource type="Script" uid="uid://dd7r31j6i8wbk" path="res://menu_de_inicio.gd" id="1_3267m"]
+[ext_resource type="Texture2D" uid="uid://b0of4sbhj1tot" path="res://assets/escenarios/2.jpg" id="2_brnf4"]
+[ext_resource type="Texture2D" uid="uid://dj7o7d60ngrrx" path="res://assets/escenarios/foto_de_inicio.png" id="3_ryuye"]
+[ext_resource type="Texture2D" uid="uid://xreiveqgc4fp" path="res://assets/escenarios/Blanco_Negro_Tijera_Recuadro_Logo-removebg-preview.png" id="4_3nxae"]
 
 [sub_resource type="FontVariation" id="FontVariation_xm355"]
 
 [node name="menu_de_inicio" type="Node2D"]
 position = Vector2(1232, -129)
-script = ExtResource("1_xm355")
-
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+script = ExtResource("1_3267m")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_left = -1224.0
 offset_top = 139.0
 offset_right = 360.0
 offset_bottom = 931.0
-texture = ExtResource("1_ewqxe")
+texture = ExtResource("2_brnf4")
 metadata/_edit_use_anchors_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="player" type="Sprite2D" parent="."]
 position = Vector2(-64, 477)
 scale = Vector2(0.761094, 0.61623)
-texture = ExtResource("2_71fcd")
+texture = ExtResource("3_ryuye")
 
-[node name="Sprite2D2" type="Sprite2D" parent="."]
+[node name="cartel" type="Sprite2D" parent="."]
 position = Vector2(-64, 609)
 scale = Vector2(1.408, 1.355)
-texture = ExtResource("3_xm355")
+texture = ExtResource("4_3nxae")
 
-[node name="TITULO" type="Label" parent="."]
+[node name="titulo" type="Label" parent="."]
 offset_left = -1128.0
 offset_top = 204.0
 offset_right = -266.0

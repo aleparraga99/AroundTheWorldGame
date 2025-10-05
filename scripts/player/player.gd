@@ -90,4 +90,3 @@ func _movimiento_del_player(delta):
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	if area.is_in_group("ataque_enemy"):
 		recibir_daño()
-		print(str(vida_actual))

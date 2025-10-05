@@ -1,7 +1,7 @@
 extends Node2D
 
 @onready var player = $player
-@onready var death_screen = $fin
+@onready var death_screen = $muerto
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	player.muerto.connect(_on_player_muerto)
