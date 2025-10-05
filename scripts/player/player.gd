@@ -16,7 +16,7 @@ var orientacion_derecha = true
 
 signal muerto
 var vida_actual: int = 100
-var daño_recibido : int = 10
+var daño_recibido : int = 20
 
 
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D

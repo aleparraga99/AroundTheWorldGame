@@ -65,7 +65,7 @@ position = Vector2(11144, 1059)
 position = Vector2(12736, 1059)
 
 [node name="enemigo12" parent="." instance=ExtResource("4_ul51f")]
-position = Vector2(10440, 1048)
+position = Vector2(11464, 1051)
 
 [node name="enemigo13" parent="." instance=ExtResource("4_ul51f")]
 position = Vector2(12312, 1059)
@@ -127,6 +127,9 @@ position = Vector2(8624, 456)
 [node name="enemigo26" parent="." instance=ExtResource("4_ul51f")]
 position = Vector2(3512, 448)
 
+[node name="enemigo27" parent="." instance=ExtResource("4_ul51f")]
+position = Vector2(3512, 448)
+
 [node name="pausa" parent="." instance=ExtResource("5_lul8p")]
 
 [node name="fin" parent="." instance=ExtResource("6_fpcv8")]
@@ -141,12 +144,21 @@ offset_bottom = 680.0
 texture = ExtResource("3_f3ch5")
 stretch_mode = 1
 
+[node name="TextureRect5" type="TextureRect" parent="TextureRect2"]
+z_index = -1
+offset_left = 17304.0
+offset_top = 488.0
+offset_right = 20296.0
+offset_bottom = 1528.0
+texture = ExtResource("9_56y0f")
+stretch_mode = 1
+
 [node name="TextureRect3" type="TextureRect" parent="."]
 z_index = -1
-offset_left = 10104.0
-offset_top = 624.0
-offset_right = 14585.0
-offset_bottom = 1104.0
+offset_left = 10144.0
+offset_top = 639.0
+offset_right = 14625.0
+offset_bottom = 1119.0
 texture = ExtResource("9_56y0f")
 stretch_mode = 1
 

@@ -7,7 +7,7 @@ var posicionInicial : Vector2
 
 var vida_maxima : int = 100
 var vida_actual
-var daño_recibido : int = 25
+var daño_recibido : int = 10
 
 func die() -> void:
 	queue_free()
