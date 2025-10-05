@@ -1,6 +1,8 @@
 extends CharacterBody2D
 class_name player
 
+@onready var death_screen = $muerte
+
 
 
 
@@ -15,6 +17,7 @@ var arrojando = false
 var orientacion_derecha = true
 
 signal muerto
+
 var vida_actual: int = 100
 var daño_recibido : int = 20
 
@@ -30,8 +33,7 @@ func recibir_daño():
 	vida_actual -= daño_recibido
 	if vida_actual <= 0:
 		die()
-
-	
+		
 
 func _ready() -> void:
 	pass

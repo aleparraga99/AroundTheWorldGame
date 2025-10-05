@@ -1,15 +1,15 @@
 extends Node2D
-
 @onready var player = $player
-@onready var death_screen = $muerto
-# Called when the node enters the scene tree for the first time.
+
+
 func _ready() -> void:
-	player.muerto.connect(_on_player_muerto)
+	player.connect('muerto',morir)
 
-func _on_player_muerto():
-	death_screen.visible = true
-	get_tree().paused = true
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+func morir():
+	var muerte = preload("res://escenas/screen_elements/muerto.tscn").instantiate()
+	add_child(muerte)
+	
+	
 func _process(delta: float) -> void:
 	pass

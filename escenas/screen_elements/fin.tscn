@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://ghddhv8hi5n6"]
+[gd_scene load_steps=7 format=3 uid="uid://ghddhv8hi5n6"]
 
 [ext_resource type="Texture2D" uid="uid://0n85nhnog760" path="res://assets/escenarios/forest2.jpg" id="1_g16tn"]
 [ext_resource type="Script" uid="uid://xrfonkvv4oym" path="res://scripts/screen_elements/fin.gd" id="1_q8207"]
 [ext_resource type="Texture2D" uid="uid://dj7o7d60ngrrx" path="res://assets/escenarios/foto_de_inicio.png" id="2_nyhe1"]
 [ext_resource type="Texture2D" uid="uid://bcca2mkdvyxvs" path="res://assets/enemyAnt/walk/1.png" id="3_8voc6"]
 [ext_resource type="Texture2D" uid="uid://baa368bi254ar" path="res://assets/weaponBug/1.png" id="4_q8207"]
+[ext_resource type="AudioStream" uid="uid://y1fjx46nalbh" path="res://assets/musica/musica_inicio-fin.mp3" id="6_pfy1q"]
 
 [node name="fin" type="Node2D"]
 script = ExtResource("1_q8207")
@@ -49,3 +50,9 @@ offset_bottom = 654.0
 theme_override_font_sizes/font_size = 37
 text = "Presione enter para
     volver al inicio"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_pfy1q")
+volume_db = 4.0
+autoplay = true
+parameters/looping = true

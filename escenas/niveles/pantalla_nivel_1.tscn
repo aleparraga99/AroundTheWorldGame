@@ -1,17 +1,16 @@
-[gd_scene load_steps=15 format=4 uid="uid://cx1hqvmtsq4ec"]
+[gd_scene load_steps=14 format=4 uid="uid://cx1hqvmtsq4ec"]
 
-[ext_resource type="Script" uid="uid://daao88chwia6h" path="res://scripts/niveles/pantalla_nivel_1.gd" id="1_i8r42"]
+[ext_resource type="Script" uid="uid://ct4qmnmn7705s" path="res://scripts/niveles/pantalla_nivel_1.gd" id="1_i8r42"]
 [ext_resource type="PackedScene" uid="uid://pts3eyus3iks" path="res://escenas/player/player.tscn" id="1_rmrmp"]
 [ext_resource type="TileSet" uid="uid://c5qnglud4hray" path="res://tiles/suelo.tres" id="2_cv2ay"]
 [ext_resource type="Texture2D" uid="uid://yyqdxgr44e4h" path="res://assets/escenarios/FondoBoscoso.png" id="3_f3ch5"]
 [ext_resource type="PackedScene" uid="uid://nc2wua71ykpk" path="res://escenas/enemys/enemigo_1.tscn" id="4_ul51f"]
 [ext_resource type="PackedScene" uid="uid://b4hsw0wklxlud" path="res://escenas/screen_elements/pausa.tscn" id="5_lul8p"]
-[ext_resource type="PackedScene" uid="uid://by4quvag87oe3" path="res://escenas/screen_elements/muerto.tscn" id="6_fpcv8"]
-[ext_resource type="Script" uid="uid://r68a57id84ew" path="res://scripts/screen_elements/muerte.gd" id="8_vl4bj"]
 [ext_resource type="Texture2D" uid="uid://bg4ejgvuii1y0" path="res://assets/escenarios/images.jpg" id="9_56y0f"]
 [ext_resource type="PackedScene" uid="uid://bl2mcwee5o8ka" path="res://escenas/niveles/puerta_niveles.tscn" id="10_56y0f"]
 [ext_resource type="Texture2D" uid="uid://liu0cagngc6p" path="res://assets/escenarios/rocas-removebg-preview.png" id="11_ln8vh"]
 [ext_resource type="Texture2D" uid="uid://bj2ly4y7e2y6q" path="res://assets/escenarios/cartel-de-madera-cartel-animado-de-madera-11562899396zokd5pzibo-removebg-preview.png" id="12_x6lxh"]
+[ext_resource type="AudioStream" uid="uid://j34wsqfjw5a8" path="res://assets/musica/musica_nvel_1.mp3" id="13_w6m2n"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x6lxh"]
 size = Vector2(807.25, 472)
@@ -21,6 +20,13 @@ size = Vector2(512, 288)
 
 [node name="PantallaNivel1" type="Node2D"]
 script = ExtResource("1_i8r42")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+process_mode = 3
+stream = ExtResource("13_w6m2n")
+volume_db = -12.0
+autoplay = true
+parameters/looping = true
 
 [node name="TextureRect" type="TextureRect" parent="."]
 z_index = -1
@@ -140,9 +146,6 @@ position = Vector2(3512, 448)
 position = Vector2(3512, 448)
 
 [node name="pausa" parent="." instance=ExtResource("5_lul8p")]
-
-[node name="fin" parent="." instance=ExtResource("6_fpcv8")]
-script = ExtResource("8_vl4bj")
 
 [node name="TextureRect2" type="TextureRect" parent="."]
 z_index = -1

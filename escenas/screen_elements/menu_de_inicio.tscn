@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://ds0qyses5nisk"]
+[gd_scene load_steps=7 format=3 uid="uid://ds0qyses5nisk"]
 
-[ext_resource type="Script" uid="uid://dd7r31j6i8wbk" path="res://menu_de_inicio.gd" id="1_3267m"]
+[ext_resource type="Script" uid="uid://dd7r31j6i8wbk" path="res://scripts/screen_elements/menu_de_inicio.gd" id="1_3267m"]
 [ext_resource type="Texture2D" uid="uid://b0of4sbhj1tot" path="res://assets/escenarios/2.jpg" id="2_brnf4"]
 [ext_resource type="Texture2D" uid="uid://dj7o7d60ngrrx" path="res://assets/escenarios/foto_de_inicio.png" id="3_ryuye"]
 [ext_resource type="Texture2D" uid="uid://xreiveqgc4fp" path="res://assets/escenarios/Blanco_Negro_Tijera_Recuadro_Logo-removebg-preview.png" id="4_3nxae"]
+[ext_resource type="AudioStream" uid="uid://y1fjx46nalbh" path="res://assets/musica/musica_inicio-fin.mp3" id="5_brnf4"]
 
 [sub_resource type="FontVariation" id="FontVariation_xm355"]
 
@@ -55,3 +56,9 @@ Al ser una demo, la jugabilidad y escenarios son
  algo básicos. Aún  así espero que te guste y que estés 
 disfrutando de la TEKNÉ"
 metadata/_edit_use_anchors_ = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_brnf4")
+volume_db = 5.0
+autoplay = true
+parameters/looping = true

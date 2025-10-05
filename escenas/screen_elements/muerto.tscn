@@ -1,10 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://by4quvag87oe3"]
+[gd_scene load_steps=3 format=3 uid="uid://by4quvag87oe3"]
 
-[ext_resource type="Script" uid="uid://dl80ep1c40sf5" path="res://scripts/screen_elements/pausa.gd" id="1_g16tn"]
+[ext_resource type="Script" uid="uid://ddrqeseeh1pqa" path="res://scripts/screen_elements/muerto.gd" id="1_jflrp"]
+[ext_resource type="AudioStream" uid="uid://ie0dgxoy0sso" path="res://assets/musica/musica_muerto.mp3" id="2_jflrp"]
 
-[node name="fin" type="CanvasLayer"]
+[node name="muerto" type="CanvasLayer"]
 process_mode = 3
-script = ExtResource("1_g16tn")
+script = ExtResource("1_jflrp")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 anchors_preset = 15
@@ -12,7 +13,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.1812, 0.1812, 0.1812, 0.356863)
+color = Color(0.0562916, 0.0562916, 0.0562916, 0.356863)
 
 [node name="Label" type="Label" parent="."]
 offset_left = 328.0
@@ -23,3 +24,10 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 60
 text = "               MUERTO
 Presione enter para reiniciar"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+process_mode = 3
+stream = ExtResource("2_jflrp")
+volume_db = 5.0
+autoplay = true
+parameters/looping = true
